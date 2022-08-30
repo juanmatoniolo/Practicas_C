@@ -1,8 +1,10 @@
 #include <stdio.h>
+
+/*
 // Funciones simples
 int cubo(int);
 
-/*//Main funcion cubo
+//Main funcion cubo
 int main()
 {
     int x;
@@ -14,9 +16,9 @@ int main()
 
     return 0;
 }
-*/
 
-/* Bucle for para sacar el cubo de n numeros
+
+Bucle for para sacar el cubo de n numeros
 int main()
 {
     int numero;
@@ -24,10 +26,15 @@ int main()
         printf("El cubo de %d es igual a %d\n", numero, cubo(numero));
     return 0;
 }
-*/
-
 
 int cubo(int x)
 {
     return x * x * x;
 }
+*/
+
+
+
+
+
+
