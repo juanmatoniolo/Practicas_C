@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 // Reciba 3 floats indicando la longitud de los lados de un triángulo e indique si es posible formar un triángulo con dichos lados.
-
 // La suma de dos lados del triángulo siempre es mayor que la medida del tercer lado. Si esto resulta ser verdad para todas las tres combinaciones de las sumas, entonces tienes un triángulo.
 
 int estriangulo(float, float, float);

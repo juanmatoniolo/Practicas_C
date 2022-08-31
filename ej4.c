@@ -2,7 +2,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 int digitos(unsigned long long x);
 
 int main()

@@ -1,5 +1,4 @@
 // F2-3) Dado un array de N enteros, crear una función para invertirlo y posteriormente mostrarlo por pantalla.
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

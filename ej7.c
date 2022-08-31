@@ -70,3 +70,5 @@ int pertenece(int list[], int aux)
         printf("El numero %d NO pertenece a la lista", aux);
     }
 }
+
+
