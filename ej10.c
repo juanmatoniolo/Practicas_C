@@ -15,19 +15,26 @@
 int carga(int[]);
 int muestra(int[]);
 int pertenece(int[], int, int);
+int unyon(int[], int[], int[]);
 
 int main()
 {
     int A[N], B[N];
+    int U[N * 2], I[N];
+
     printf("Primero generamos una lista y luego la imprimimos por pantalla:\n\n");
     carga(A);
     carga(B);
 
     printf("Mostraremos la lista A:\n");
     muestra(A);
+    printf("%d",A[0]);
 
     printf("\n\nMostramos la lista B:\n");
     muestra(B);
+
+    printf("\nLa union entre la lista A y la lista B es:\n");
+    unyon(A, B, U);
 
     return 0;
 }
@@ -53,8 +60,8 @@ int carga(int list[])
         {
             list[i] = rand() % NUM + 1;
         } while (pertenece(list, list[i], i));
-    }   //Pertenece toma la lista entera, el valor de lista en i y dice si i esta o no
-        // pertenece devuelve 1 si esta 0 si no esta, i!=0
+    } // Pertenece toma la lista entera, el valor de lista en i y dice si i esta o no
+      //  pertenece devuelve 1 si esta 0 si no esta, i!=0
 }
 
 int muestra(int lista[])
@@ -66,4 +73,27 @@ int muestra(int lista[])
         printf("%d ", lista[i]);
     }
     printf("}\n ");
+}
+
+int unyon(int a[], int b[], int u[])
+{
+    int i, j, k;
+
+    for (i = 0; i < N; i++)
+    {
+        a[i] = u[i];
+    }
+    for (j = N; j < N * 2; j++)
+    {   
+        int cont = 0;
+        b[cont] = u[j];
+        cont++;
+    }
+
+    printf("{ ");
+    for ( k = 0; k < N*2; k++)
+    {
+        printf("%d ", u[k]);
+    }
+    printf(" } ");
 }
