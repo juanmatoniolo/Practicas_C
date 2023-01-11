@@ -219,7 +219,7 @@ int main()
 }
 */
 // A2-2) Permita la carga aleatoria de dos arrays de 10 enteros cada uno, llamados A y B, e indique cual de los dos tiene más números pares tratando de utilizando como máximo dos bucles for en todo el programa.
-/* 
+/*
 int main()
 {
 
@@ -277,9 +277,95 @@ int main()
     return 0;
 }
 */
+// A2-3) Dado un array A de 10 ints cagado aleatoriamente y con valores comprendidos entre 0 y 100, determinar si se tienen más elementos pares que impares o bien misma cantidad. Rehaga el ejercicio utilizando un único bucle for si empleo más de uno.
+/*
+int main()
+{
+    int A[10];
+    srand(time(NULL));
+    int contP = 0;
+    int contI = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        A[i] = rand() % 101;
+        printf("%d ",A[i]);
+        if (A[i] % 2 == 0)
+        {
+            contP++;
+        }
+        else
+        {
+            contI++;
+        }
+    }
+
+    if (contP > contI)
+    {
+        printf("\nLos numeros PARES son mas que los impares\nHay %d numeros pares\n\n", contP);
+    }
+    else
+    {
+        printf("\nLos numeros IMPARES son mas que los impares.\nHay %d numeros impares\n\n", contI);
+
+    }
+    return 0;
+}
+*/
+
+// A2-4) Dado un array A de 10 enteros cargados automáticamente (con números aleatorios), invertir el array, es decir si se tiene el array A= [ 45, 11, -5, 80, 6, 99, 105, -200, 22, 1 ], A deberá quedar del siguiente modo al finalizar el programa A= [ 1, 22, -200, 105, 99, 6, 80, -5, 11, 45 ]. Considere el uso de una variable a modo de pivote.
+#define AS printf("\n");
+/*
+int main()
+{
+    int count = 10;
+    int A[10];
+    int piv= 9;
+    srand(time(NULL));
+
+    for (int i = 0; i < count; i++)
+    {
+        A[i] = rand() % 25;
+        printf("%d, ",A[i]);
+
+    }
+    AS;
+    for (int i = 0 ; i < count; i++)
+    {
+        printf("%d- ",A[piv]);
+        piv --;
+    }
+
+    return 0;
+}
+*/
+
+/*A2-5) Dado un array A de N enteros cargados manualmente o bien de forma automática y un número entero r en el rango [-(N-1), N-1].
+El valor r impondrá rotaciones a derecha (en caso de r positivo) o rotaciones a izquierda (en caso de r negativo) sobre los elementos del array A. Una rotación es el cambio de posición en los elementos del array.
+
+Ejemplo, un array A con N valiendo 10, r estará comprendido en [-9, 9]. Es decir, dado el array A= [ 45, 11, -5, 80, 6, 99, 105, -200, 22, 1],
+ Si r=  1  ⇒  A= [ 1, 45, 11, -5, 80, 6, 99, 105, -200, 22 ]
+ Todos los elementos rotaron 1 posición a la derecha
+ Si r=-3  ⇒   A= [ -5, 80, 6, 99, 105, -200, 22, 1, 45, 11 ]   Todos los elementos rotaron 3 posiciones a la izquierda*/
+
+int main()
+{
+    int count = 10;
+    int A[count - 1];
+    srand(time(NULL));
+    int r, copiar_r[count - 1];
+
+    for (int i = 0; i < count; i++)
+    {
+        A[i] = rand() % 30;
+        printf("%d)  %d\n", i + 1, A[i]);
+    }
+
+    do
+    {
+        printf("Cuantas posiciones mover:\n>?");
+        scanf("%d", &r);
+    } while (r < -10 || r > 10);
 
 
-
-
-
-
+    return 0;
+}
