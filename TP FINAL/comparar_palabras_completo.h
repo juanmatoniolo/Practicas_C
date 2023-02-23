@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 
-int main()
+int comparar_palabras()
 {
     int word;
     char palabras_guardadas[30][6] = {
@@ -38,6 +38,8 @@ int main()
         "TIMON",
         "VALES",
     };
+    
+    //Palabras que yo tipeo
     char humano[6];
     char *ph;
     ph = &humano[0];
@@ -91,7 +93,7 @@ int main()
         }
     } //OBSERVANDO LAS PALABRAS ME DI CUENTA QUE NO SE REPETIN LETRAS EN LAS MISMAS ENTONCES SI COINCIDEN EN EL PRIMER IF DEL FOR SUMU 10 AL CONTADOR, SI COINCIDE EN ALGUN OTRO LADO QUE SUMAMOS 1 Y ESO SIG QUE LA LETRA EXISTE DENTRO DE LA PALABRA Y SI EL CONTADOR QUEDA EN 0 SIGNIFICA QUE ESA LETRA NO EXISTE.
 
-    printf("\n\n RECUERDE QUE: \n'#' SIGNIFICA QUE LA LETRA ES CORRECTA EN EL LUGAR EN QUE ESTA\n'*' SIGNIFICA QUE LA LETRA CORRESPONDE A LA PALABRA PERO NO ES EL LUGAR CORRECTO \n'-' LA LETRA NO PERTENE A LA PALABRA\n");
+    printf("\n\n RECUERDE QUE: \n'#' LETRA ES CORRECTA \n'*' LETRA CORRESPONDE PERO NO ES EL LUGAR  \n'-' LA LETRA NO PERTENE A LA PALABRA\n");
 
     return 0;
 }
