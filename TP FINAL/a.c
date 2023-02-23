@@ -1,19 +1,12 @@
-
 #include "funciones_finales.h"
-
-
 
 int main()
 {
-   
-    int cont = 0;
-    int puntaje_inicial = 5000; 
-    int *pi;
-    pi = &puntaje_inicial;
-  
-        comparar();
-    
-    
-
+    marco_arriba();
+    intrucciones();
+    marco_abajo();
+    system("pause");
+    system("cls");
+    comparar();
     return 0;
 }
